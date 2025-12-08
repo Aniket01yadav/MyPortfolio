@@ -6,6 +6,7 @@ import AboutMe from './Components/Aboutme'
 import Skills  from './Components/Skills'
 import Projects from './Components/Project'
 import ContactMe from './Components/ContactMe'
+import Fotter from './Components/Fotter'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Skills />
       <Projects />
       <ContactMe />
+      <Fotter />
     </div>
   )
 }

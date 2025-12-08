@@ -23,7 +23,7 @@ const Skills = () => {
   <div className="max-w-6xl mx-auto px-6">
 
     <h2 className="text-3xl font-bold text-center text-cyan-300 mb-10">My Skills</h2>
-    <h4 className='text-xl font-bold text-center text-cyan-300 mb-10'>Tools & Technologies</h4>
+    <h4 className='text-xl font-bold text-center text-cyan-300 mb-10'>Tools & Technologies I’ve Worked With</h4>
 
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
       
@@ -137,31 +137,6 @@ const Skills = () => {
       </div>
 
 
-
-      {/* C */}
-      <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-blue-400">
-        <img
-                    src= {C}
-                    alt="C_logo"
-                    className="w-13 h-13 mb-3"
-        />
-        <span className="text-white font-semibold">C</span>
-      </div>
-
-
-
-      {/* CPP */}
-      <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-blue-400">
-        <img
-                    src= {CPP}
-                    alt="CPP_logo"
-                    className="w-13 h-13 mb-3"
-        />
-        <span className="text-white font-semibold">C++</span>
-      </div>
-
-
-
       {/* Git */}
       <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-orange-600">
         <img
@@ -170,18 +145,6 @@ const Skills = () => {
                     className="w-15 h-15 mb-3"
         />
         <span className="text-white font-semibold">Git</span>
-      </div>
-
-
-
-      {/* Vs code */}
-      <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-blue-700">
-        <img
-                    src= {VS_CODE}
-                    alt="Vs Code_logo"
-                    className="w-13 h-13 mb-3"
-        />
-        <span className="text-white font-semibold">Vs code</span>
       </div>
 
 
@@ -203,16 +166,6 @@ const Skills = () => {
                     className="w-13 h-13 mb-3"
         />
         <span className="text-white font-semibold">Github</span>
-      </div>
-
-      {/* Muthi */}
-      <div className="bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center transition-all duration-300 transform hover:-translate-y-2 border-2 border-transparent hover:border-white">
-        <img
-                    src= {MUTHHI}
-                    alt="MUTHHI_logo"
-                    className="w-13 h-13 mb-3"
-        />
-        <span className="text-white font-semibold">Muthii</span>
       </div>
 
 
