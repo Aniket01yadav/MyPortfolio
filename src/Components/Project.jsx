@@ -40,6 +40,27 @@ const mediumProjects = [
   },
 ];
 
+const advancedProjects = [
+  {
+    id: 1,
+    title: "Automated Attendance System",
+    description:
+      "An intelligent attendance tracking system that automates the process of marking attendance efficiently.",
+    tech: ["React.js", "JavaScript", "TailwindCSS", "MongoDB","Express.js", "Node.js"],
+    github: "https://github.com/Aniket01yadav/Automated-Attendance",
+    demo: "https://inclasses.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Samvidhan Seekho",
+    description:
+      "An educational platform dedicated to teaching and exploring the Indian Constitution with interactive content.",
+    tech: ["React.js", "Javascript", "TailwindCSS", "MongoDB","Express.js", "Node.js"],
+    github: "https://github.com/SamvidhanSeekho/Samvidhan_1",
+    demo: "https://samvidhanseekho.vercel.app/",
+  },
+];
+
 const Projects = () => {
   return (
     <section
@@ -93,10 +114,54 @@ const Projects = () => {
       </div>
 
       {/* Medium Projects */}
-      <div>
+      <div className="mb-16">
         <h3 className="text-3xl font-semibold mb-8 text-cyan-400">Medium Projects</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {mediumProjects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-cyan-500/30 transition duration-300 hover:-translate-y-4"
+            >
+              <h4 className="text-2xl font-semibold mb-3">{project.title}</h4>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.tech.map((t, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-sm bg-cyan-900 rounded-full text-cyan-200"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-4">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 hover:text-cyan-400"
+                >
+                  <FaGithub /> Code
+                </a>
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 hover:text-cyan-400"
+                >
+                  <FaExternalLinkAlt /> Live
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Advanced Projects */}
+      <div>
+        <h3 className="text-3xl font-semibold mb-8 text-cyan-400">Advance Projects</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {advancedProjects.map((project) => (
             <div
               key={project.id}
               className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-cyan-500/30 transition duration-300 hover:-translate-y-4"
