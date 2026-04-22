@@ -7,6 +7,7 @@ import Skills  from './Components/Skills'
 import Projects from './Components/Project'
 import ContactMe from './Components/ContactMe'
 import Fotter from './Components/Fotter'
+import Experience from './Components/Experience'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <FloatingCanvas />
       <AboutMe />
       <Skills />
+      <Experience/>
       <Projects />
       <ContactMe />
       <Fotter />

@@ -10,7 +10,7 @@ const Hero = () => {
     >
       <div className="z-10 px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Hello, I'm Aniket.</h1>
-        <h2 className="text-2xl md:text-4xl font-semibold mb-8">Aspiring Full Stack Developer</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold mb-8">Full Stack Developer</h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           <a

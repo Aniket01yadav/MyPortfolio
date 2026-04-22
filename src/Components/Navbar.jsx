@@ -22,7 +22,7 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8 text-lg font-medium">
-            {['Home', 'About', 'Skills','Projects', 'Contact'].map((item) => (
+            {['Home', 'About', 'Skills', 'Experience','Projects', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
