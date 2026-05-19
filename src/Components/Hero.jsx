@@ -9,26 +9,26 @@ const Hero = () => {
       id="home"
     >
       <div className="z-10 px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Hello, I'm Aniket.</h1>
-        <h2 className="text-2xl md:text-4xl font-semibold mb-8">Full Stack Developer</h2>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">Hello, I'm Aniket.</h1>
+        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 sm:mb-8">Full Stack Developer</h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
           <a
             href= "#contact"
-            className="px-6 py-2 border border-cyan-500 rounded hover:bg-cyan-300 hover:text-black transition"
+            className="px-4 sm:px-6 py-2 text-sm sm:text-base border border-cyan-500 rounded hover:bg-cyan-300 hover:text-black transition"
           >
             Hire Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1cJUQiHhLsJUXywhBbxmR81Y8IZ7lJ7Z-/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1mPAMUrGBzZOforK6i7st6a2l-zJCTPeM/view?usp=sharing"
             download
-            className="px-6 py-2 border border-cyan-500 rounded hover:bg-cyan-300 hover:text-black transition"
+            className="px-4 sm:px-6 py-2 text-sm sm:text-base border border-cyan-500 rounded hover:bg-cyan-300 hover:text-black transition"
           >
             Download Resume
           </a>
         </div>
 
-        <div className="flex gap-6 justify-center text-2xl">
+        <div className="flex gap-4 sm:gap-6 justify-center text-xl sm:text-2xl">
           <a href="https://www.linkedin.com/in/aniket-kumar-0ab18a340/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="hover:text-white" />
           </a>

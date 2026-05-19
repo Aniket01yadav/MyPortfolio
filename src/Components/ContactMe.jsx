@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -9,6 +9,39 @@ import {
 } from "react-icons/fa";
 
 const Contact = () => {
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setStatus("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/aniyadav264@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Message could not be sent");
+      }
+
+      form.reset();
+      setStatus("Message sent successfully. I will reply soon.");
+    } catch {
+      setStatus("Message could not be sent. Please email me directly at aniyadav264@gmail.com.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -20,11 +53,19 @@ const Contact = () => {
 
       <div className="z-10 w-full max-w-6xl grid md:grid-cols-2 gap-12">
         {/* Left Side - Form */}
-        <form className="bg-gray-900 shadow-2xl rounded-2xl p-6 md:p-10 space-y-6 text-left hover:translate-y-[-5px] transition-transform duration-300">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-gray-900 shadow-2xl rounded-2xl p-6 md:p-10 space-y-6 text-left hover:translate-y-[-5px] transition-transform duration-300"
+        >
+          <input type="hidden" name="_subject" value="New portfolio contact message" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <div>
             <label className="block mb-2 text-cyan-400">Name</label>
             <input
+              name="name"
               type="text"
               placeholder="Your Name"
               className="w-full px-4 py-3 rounded-lg bg-black border border-cyan-500 text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -34,6 +75,7 @@ const Contact = () => {
           <div>
             <label className="block mb-2 text-cyan-400">Email</label>
             <input
+              name="email"
               type="email"
               placeholder="Your Email"
               className="w-full px-4 py-3 rounded-lg bg-black border border-cyan-500 text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -43,6 +85,7 @@ const Contact = () => {
           <div>
             <label className="block mb-2 text-cyan-400">Message</label>
             <textarea
+              name="message"
               rows="5"
               placeholder="Write your message..."
               className="w-full px-4 py-3 rounded-lg bg-black border border-cyan-500 text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-400"
@@ -51,21 +94,30 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition"
+            disabled={isSubmitting}
+            className="w-full py-3 rounded-lg bg-cyan-500 text-black font-bold hover:bg-cyan-400 transition disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
+          {status && (
+            <p className="text-sm text-cyan-200">
+              {status}
+            </p>
+          )}
         </form>
 
         {/* Right Side - Social Contact Section */}
-        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start">
-          <h2 className="text-3xl font-bold mb-4">contact.</h2>
-          <p className="text-lg text-cyan-200 mb-8">
+        <div className="flex flex-col justify-center text-center md:text-left items-center md:items-start w-full">
+          <div className="mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2">Contact Me</h2>
+            <div className="h-1 bg-gradient-to-r from-cyan-500 to-transparent rounded-full" style={{width: '120px'}}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg text-cyan-200 mb-6 sm:mb-8">
             Get in touch with me via social media, email, or phone.
           </p>
 
           {/* 2-column Grid for Social Links */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full">
             <a
               href="https://x.com/theaniketyadav1"
               target="_blank"
@@ -103,7 +155,7 @@ const Contact = () => {
               Instagram
             </a>
             <a
-              href="mailto:aniyadav@gmail.com"
+              href="mailto:aniyadav264@gmail.com"
               className="flex items-center gap-3 hover:text-cyan-400"
             >
               <FaEnvelope className="text-3xl text-red-500" />
@@ -114,7 +166,7 @@ const Contact = () => {
               href="tel:+919798168320"
               className="flex items-center gap-3 hover:text-cyan-400"
             >
-              <FaPhone className="text-3xl text-green-500" />
+              <FaPhone className="text-3xl text-green-500" style={{ transform: 'scaleX(-1)' }} />
               Phone - +91 9798168320
             </a>
 

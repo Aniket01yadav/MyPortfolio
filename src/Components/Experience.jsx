@@ -62,7 +62,7 @@ const Experience = () => {
     >
       {/* Section Header */}
       <div className="max-w-6xl mx-auto mb-16">
-        <h2 className="text-5xl font-bold text-center mb-4">Experience</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">Experience</h2>
         <div className="flex justify-center">
           <div className="w-20 h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent rounded-full"></div>
         </div>
