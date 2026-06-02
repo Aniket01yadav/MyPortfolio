@@ -21,7 +21,7 @@ const experience = [
     certificates: [
       {
         name: "Internship Completion Certificate",
-        link: "https://drive.google.com/file/d/1smSiLDZ4cFcNNKMgphyvqkx6XO87SkgeW/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1H9Dr39hM2dfYrHUj19Hmz9rpsajgQHgV/view?usp=sharing",
       },
       {
         name: "Certificate of Appreciation",
@@ -48,7 +48,7 @@ const experience = [
     certificates: [
       {
         name: "Internship Completion Certificate",
-        link: "https://drive.google.com/file/d/1_NQTrjHP68_U04XquQ5cHfX1-KYHxwuQ/view?usp=sharing",
+        link: "https://drive.google.com/file/d/13AKDVlM_HbCjCCQjl_b2F2hGIx68UmU8/view?usp=sharing",
       },
     ],
   },

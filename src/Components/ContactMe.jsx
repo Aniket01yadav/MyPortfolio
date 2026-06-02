@@ -159,7 +159,7 @@ const Contact = () => {
               className="flex items-center gap-3 hover:text-cyan-400"
             >
               <FaEnvelope className="text-3xl text-red-500" />
-              Email - aniyadav264@gmail.com
+              aniyadav264@gmail.com
             </a>
 
             <a
