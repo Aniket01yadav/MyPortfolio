@@ -7,6 +7,7 @@ import peachdev_img from "../assets/peachdev.png"
 import BMI_img from "../assets/BMI.png"
 import Clock_img from "../assets/clock.webp"
 import NumGUess_img from "../assets/NumGuessing.png"
+import syanpse from "../assets/synapse.png"
 
 const basicProjects = [
   {
@@ -71,6 +72,16 @@ const advancedProjects = [
     github: "https://github.com/SamvidhanSeekho/Samvidhan_1",
     demo: "https://samvidhanseekho.vercel.app/",
     image: samvidhan_img,
+  },
+  {
+    id: 3,
+    title: "Synapse",
+    description:
+      "Interactive social networking platform with relationship visualization, hobby management, and personalized recommendations.",
+    tech: ["React.js", "React Flow", "Javascript", "TailwindCSS", "MongoDB","Express.js", "Node.js"],
+    github: "https://github.com/Aniket01yadav/Synapse",
+    demo: "https://synapse-three-eta.vercel.app",
+    image: syanpse,
   },
 ];
 
