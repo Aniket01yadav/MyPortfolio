@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-black/80 backdrop-blur-md px-4 py-4 space-y-2 text-base font-medium">
-          {['Home', 'About', 'Skills','Projects', 'Contact'].map((item) => (
+          {['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}

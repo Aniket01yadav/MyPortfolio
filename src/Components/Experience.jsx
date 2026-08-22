@@ -36,7 +36,7 @@ const experience = [
     type: "Platform",
     position: "Frontend Developer Intern",
     certificate: "Frontend Developer Intern",
-    duration: "Duration: 2 Months",
+    duration: "Duration: 1 Months",
     description:
       "Built responsive user interfaces and worked on frontend components using modern web technologies and best practices.",
     tech: ["React.js", "JavaScript", "TailwindCSS", "HTML/CSS"],

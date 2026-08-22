@@ -4,55 +4,10 @@ import { FiArrowUpRight } from "react-icons/fi";
 import attendancei_img from "../assets/attendance.png"
 import samvidhan_img from "../assets/samvidhan.png"
 import peachdev_img from "../assets/peachdev.png"
-import BMI_img from "../assets/BMI.png"
-import Clock_img from "../assets/clock.webp"
-import NumGUess_img from "../assets/NumGuessing.png"
 import syanpse from "../assets/synapse.png"
 
-const basicProjects = [
-  {
-    id: 1,
-    title: "BMI Calculator",
-    description: "A simple BMI calculator built using HTML, CSS, and JavaScript.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Aniket01yadav/BMI-calculator",
-    demo: "https://aniket01yadav.github.io/BMI-calculator/",
-    image: BMI_img,
-  },
-  {
-    id: 2,
-    title: "Clock App",
-    description: "A digital clock application showing real-time date and time.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yourusername/clock-app",
-    demo: "https://yourusername.github.io/clock-app/",
-    image: Clock_img,
-  },
-  {
-    id: 3,
-    title: "Number Guessing Game",
-    description: "Fun game to guess a random number with hints.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Aniket01yadav/Number_guessing_game",
-    demo: "https://aniket01yadav.github.io/Number_guessing_game/",
-    image: NumGUess_img,
-  },
-];
 
-const mediumProjects = [
-  {
-    id: 1,
-    title: "ThePeachDev",
-    description:
-      "A responsive clone of ThePeachDev.com built with modern UI and animations.",
-    tech: ["HTML", "CSS", "JavaScript", "TailwindCSS", "React.js"],
-    github: "https://github.com/yourusername/thepeachdev-clone",
-    demo: "https://yourusername.github.io/thepeachdev-clone/",
-    image: peachdev_img,
-  },
-];
-
-const advancedProjects = [
+const projects = [
   {
     id: 1,
     title: "Automated Attendance System",
@@ -83,6 +38,16 @@ const advancedProjects = [
     demo: "https://synapse-three-eta.vercel.app",
     image: syanpse,
   },
+  {
+    id: 4,
+    title: "ThePeachDev",
+    description:
+      "A responsive clone of ThePeachDev.com built with modern UI and animations.",
+    tech: ["HTML", "CSS", "JavaScript", "TailwindCSS", "React.js"],
+    github: "https://github.com/yourusername/thepeachdev-clone",
+    demo: "https://yourusername.github.io/thepeachdev-clone/",
+    image: peachdev_img,
+  }
 ];
 
 const ProjectCard = ({ project }) => (
@@ -153,49 +118,20 @@ const Projects = () => {
       id="projects"
       className="relative min-h-screen overflow-hidden px-6 py-16 text-cyan-300"
     >
-      <div className="absolute left-10 top-40 h-72 w-72 animate-pulse rounded-full bg-cyan-500 opacity-20 blur-3xl mix-blend-multiply"></div>
-      <div className="absolute bottom-20 right-10 h-96 w-96 animate-pulse rounded-full bg-purple-500 opacity-20 blur-3xl mix-blend-multiply"></div>
-      <div className="absolute right-1/4 top-1/2 h-80 w-80 animate-pulse rounded-full bg-pink-500 opacity-20 blur-3xl mix-blend-multiply"></div>
-
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="mb-8 sm:mb-12">
           <h2 className="mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-center text-2xl font-bold text-cyan-300 sm:text-3xl md:text-4xl">
             Projects
           </h2>
-          <div className="flex justify-center">
-            <div className="h-1 w-20 rounded-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
-          </div>
-        </div>
-
-        <div className="mb-12 sm:mb-16">
-          <h3 className="mb-6 border-l-4 border-cyan-400 pl-4 text-xl font-semibold text-cyan-400 sm:mb-8 sm:text-2xl md:text-3xl">
-            Basic Projects
-          </h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {basicProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-12 sm:mb-16">
-          <h3 className="mb-6 border-l-4 border-cyan-400 pl-4 text-xl font-semibold text-cyan-400 sm:mb-8 sm:text-2xl md:text-3xl">
-            Medium Projects
-          </h3>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {mediumProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
         </div>
 
         <div>
           <h3 className="mb-6 border-l-4 border-cyan-400 pl-4 text-xl font-semibold text-cyan-400 sm:mb-8 sm:text-2xl md:text-3xl">
-            Advanced Projects
+            Things I have built
           </h3>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {advancedProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
             ))}
           </div>
         </div>

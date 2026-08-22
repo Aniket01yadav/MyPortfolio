@@ -20,7 +20,7 @@ const Hero = () => {
             Hire Me
           </a>
           <a
-            href="https://drive.google.com/file/d/1mPAMUrGBzZOforK6i7st6a2l-zJCTPeM/view?usp=sharing"
+            href="https://drive.google.com/file/d/1PYQaoyCV4eujWG824rov3FjOimQIW08p/view?usp=sharing"
             download
             className="px-4 sm:px-6 py-2 text-sm sm:text-base border border-cyan-500 rounded hover:bg-cyan-300 hover:text-black transition"
           >
